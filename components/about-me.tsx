@@ -7,7 +7,7 @@ export default function AboutMe() {
 				New technologies enthusiast (AI writing code instead of me) <br />
 				Movies and TV series critic <br />
 				Self-hosted and Vercel enjoyer <br />
-				Polish beer expert and home winemaker (I'm just a student) <br />
+				Polish beer expert and home winemaker (I&apos;m just a student) <br />
 			</p>
 		</section>
 	);
