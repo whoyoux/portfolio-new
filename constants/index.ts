@@ -19,7 +19,7 @@ export const PROJECTS_MOCKUP = [
 	},
 	{
 		id: 3,
-		name: "Ecommerce site",
+		name: "Ecommerce",
         slug: "ecommerce",
 		description: "",
 		images: "",
