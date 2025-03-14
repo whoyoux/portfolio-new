@@ -3,27 +3,27 @@ import placeholderImage from "@/assets/placeholder.webp";
 
 import pmc_hero from "@/assets/pureminecraft/hero.webp";
 
-type Technologies = 
-    | "NextJS" 
-    | "TypeScript" 
-    | "React" 
-    | "Node.js" 
-    | "Prisma" 
-    | "Drizzle" 
-    | "PostgreSQL" 
-    | "MongoDB" 
-    | "TailwindCSS" 
-    | "Docker" 
-    | "AWS" 
-    | "Vercel" 
-    | "GitHub Actions" 
-    | "Jest" 
-    | "Cypress" 
-    | "GraphQL" 
-    | "Redis" 
-    | "Express.js" 
-    | "NestJS" 
-    | "tRPC"
+type Technologies =
+	| "NextJS"
+	| "TypeScript"
+	| "React"
+	| "Node.js"
+	| "Prisma"
+	| "Drizzle"
+	| "PostgreSQL"
+	| "MongoDB"
+	| "TailwindCSS"
+	| "Docker"
+	| "AWS"
+	| "Vercel"
+	| "GitHub Actions"
+	| "Jest"
+	| "Cypress"
+	| "GraphQL"
+	| "Redis"
+	| "Express.js"
+	| "NestJS"
+	| "tRPC"
 	| "Stripe"
 	| "shadcn-ui"
 	| "OpenAI API"
@@ -46,7 +46,7 @@ export const PROJECTS: Project[] = [
 	{
 		id: "id_proj_1",
 		name: "AI Generator",
-        slug: "ai-generator",
+		slug: "ai-generator",
 		description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur natus esse, sint voluptate beatae laborum quae magnam! Minima, vel hic! Est labore explicabo ipsam libero rerum! Amet, nulla tenetur!",
 		images: [placeholderImage],
 		siteUrl: "",
@@ -56,7 +56,7 @@ export const PROJECTS: Project[] = [
 	{
 		id: "id_proj_2",
 		name: "Plantcare",
-        slug: "plantcare",
+		slug: "plantcare",
 		description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur natus esse, sint voluptate beatae laborum quae magnam! Minima, vel hic! Est labore explicabo ipsam libero rerum! Amet, nulla tenetur!",
 		images: [placeholderImage],
 		siteUrl: "",
@@ -66,7 +66,7 @@ export const PROJECTS: Project[] = [
 	{
 		id: "id_proj_3",
 		name: "Ecommerce",
-        slug: "ecommerce",
+		slug: "ecommerce",
 		description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur natus esse, sint voluptate beatae laborum quae magnam! Minima, vel hic! Est labore explicabo ipsam libero rerum! Amet, nulla tenetur!",
 		images: [placeholderImage],
 		siteUrl: "",
@@ -76,7 +76,7 @@ export const PROJECTS: Project[] = [
 	{
 		id: "id_proj_4",
 		name: "PureMinecraft",
-        slug: "pureminecraft",
+		slug: "pureminecraft",
 		description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur natus esse, sint voluptate beatae laborum quae magnam! Minima, vel hic! Est labore explicabo ipsam libero rerum! Amet, nulla tenetur!",
 		images: [pmc_hero],
 		siteUrl: "",
@@ -86,7 +86,7 @@ export const PROJECTS: Project[] = [
 	{
 		id: "id_proj_5",
 		name: "ShareIt",
-        slug: "shareit",
+		slug: "shareit",
 		description: "secure file hosting, encrypts and decrypts all user files",
 		images: [placeholderImage],
 		siteUrl: "",
@@ -96,20 +96,20 @@ export const PROJECTS: Project[] = [
 ];
 
 export const MY_LINKS = [
-    {
-        id: "id_link_github",
-        name: "GitHub",
-        url: "https://github.com/whoyoux"
-    },
-    {
-        id: "id_link_cv",
-        name: "CV",
-        url: "#"
-    },
+	{
+		id: "id_link_github",
+		name: "GitHub",
+		url: "https://github.com/whoyoux"
+	},
+	{
+		id: "id_link_cv",
+		name: "CV",
+		url: "#"
+	},
 	{
 		id: "id_link_email",
 		name: "Email",
-		url: ""
+		url: "mailto:teczakm@gmail.com"
 	}
 ]
 

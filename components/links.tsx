@@ -1,5 +1,5 @@
 import { MY_LINKS } from "@/constants";
-import Link from "next/link";
+import MyLink from "./my-link";
 
 export default function Links() {
 	return (
@@ -8,9 +8,9 @@ export default function Links() {
 			<ul>
 				{MY_LINKS.map((myLink) => (
 					<li key={myLink.id}>
-						<Link href={myLink.url}>
+						<MyLink href={myLink.url} text={myLink.name}>
 							<h5>{myLink.name}</h5>
-						</Link>
+						</MyLink>
 					</li>
 				))}
 			</ul>
