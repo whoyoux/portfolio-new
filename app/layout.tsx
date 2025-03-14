@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import Header from "@/components/header";
+import Script from "next/script";
 // import StillInProgress from "@/components/still-in-progress";
 
 const interSans = Inter({
@@ -43,6 +44,13 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en" suppressHydrationWarning>
+			<head>
+				<script
+					defer
+					data-domain="whoyoux.com"
+					src="https://plausible.whoyoux.com/js/script.outbound-links.pageview-props.tagged-events.js"
+				/>
+			</head>
 			<body className={`${interSans.variable} antialiased`}>
 				<ThemeProvider
 					attribute="class"
