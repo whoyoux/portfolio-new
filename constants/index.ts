@@ -1,9 +1,12 @@
+import type { StaticImageData } from "next/image";
+import placeholderImage from "@/assets/placeholder.webp";
+
 type Project = {
 	id: string,
 	name: string,
 	slug: string,
 	description: string,
-	images: string[],
+	images: StaticImageData[],
 	siteUrl: string,
 	githubUrl: string
 }
@@ -14,7 +17,7 @@ export const PROJECTS: Project[] = [
 		name: "AI Generator",
         slug: "ai-generator",
 		description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur natus esse, sint voluptate beatae laborum quae magnam! Minima, vel hic! Est labore explicabo ipsam libero rerum! Amet, nulla tenetur!",
-		images: [""],
+		images: [placeholderImage],
 		siteUrl: "",
 		githubUrl: "",
 	},
@@ -23,7 +26,7 @@ export const PROJECTS: Project[] = [
 		name: "Plantcare",
         slug: "plantcare",
 		description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur natus esse, sint voluptate beatae laborum quae magnam! Minima, vel hic! Est labore explicabo ipsam libero rerum! Amet, nulla tenetur!",
-		images: [""],
+		images: [placeholderImage],
 		siteUrl: "",
 		githubUrl: "",
 	},
@@ -32,7 +35,7 @@ export const PROJECTS: Project[] = [
 		name: "Ecommerce",
         slug: "ecommerce",
 		description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur natus esse, sint voluptate beatae laborum quae magnam! Minima, vel hic! Est labore explicabo ipsam libero rerum! Amet, nulla tenetur!",
-		images: [""],
+		images: [placeholderImage],
 		siteUrl: "",
 		githubUrl: "",
 	},
@@ -40,8 +43,8 @@ export const PROJECTS: Project[] = [
 		id: "id_proj_4",
 		name: "PureMinecraft",
         slug: "pureminecraft",
-		description: "",
-		images: [""],
+		description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur natus esse, sint voluptate beatae laborum quae magnam! Minima, vel hic! Est labore explicabo ipsam libero rerum! Amet, nulla tenetur!",
+		images: [placeholderImage],
 		siteUrl: "",
 		githubUrl: "",
 	},
@@ -50,7 +53,7 @@ export const PROJECTS: Project[] = [
 		name: "ShareIt",
         slug: "shareit",
 		description: "secure file hosting, encrypts and decrypts all user files",
-		images: [""],
+		images: [placeholderImage],
 		siteUrl: "",
 		githubUrl: "",
 	},

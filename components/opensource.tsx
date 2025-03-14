@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function OpenSource() {
 	return (
 		<section>
-			<h4>My open-source packages</h4>
+			<h4>💻 My open-source packages</h4>
 			<ul>
 				{MY_PACKAGES.map((pkg) => (
 					<li key={pkg.id}>

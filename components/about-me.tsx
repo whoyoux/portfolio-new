@@ -1,7 +1,7 @@
 export default function AboutMe() {
 	return (
 		<section>
-			<h4>About me</h4>
+			<h4>👨‍💻 About me</h4>
 			<p>
 				A 21yr youtube educated frontend and backend enjoyer (nextjs) <br />
 				New technologies enthusiast (AI writing code instead of me) <br />
