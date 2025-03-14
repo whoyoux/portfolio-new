@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import Header from "@/components/header";
-import Script from "next/script";
+import PlausibleProvider from 'next-plausible'
 // import StillInProgress from "@/components/still-in-progress";
 
 const interSans = Inter({
@@ -52,6 +52,18 @@ export default function RootLayout({
 				/>
 			</head>
 			<body className={`${interSans.variable} antialiased`}>
+				<PlausibleProvider 
+					domain="whoyoux.com" 
+					customDomain="https://plausible.whoyoux.com"
+					manualPageviews={true}
+					trackOutboundLinks={true}
+					taggedEvents={true}
+					selfHosted={true}
+					trackLocalhost={true}
+
+				>
+
+				
 				<ThemeProvider
 					attribute="class"
 					defaultTheme="system"
@@ -64,6 +76,7 @@ export default function RootLayout({
 						{children}
 					</div>
 				</ThemeProvider>
+				</PlausibleProvider>
 			</body>
 		</html>
 	);
