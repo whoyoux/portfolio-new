@@ -30,7 +30,7 @@ function CustomLink(
 
 	if (href.startsWith("/")) {
 		return (
-			<Link href={href} {...props}>
+			<Link href={href} target="_blank" rel="noopener noreferrer" {...props}>
 				{props.children}
 			</Link>
 		);
