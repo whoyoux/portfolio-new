@@ -23,6 +23,17 @@ export const metadata: Metadata = {
 			"Self-taught full-stack developer , AI enthusiast, and self-hosting enjoyer.",
 		url: "https://whoyoux.com",
 	},
+	robots: {
+		index: true,
+		follow: true,
+		googleBot: {
+			index: true,
+			follow: true,
+			"max-video-preview": -1,
+			"max-image-preview": "large",
+			"max-snippet": -1,
+		},
+	},
 };
 
 export default function RootLayout({

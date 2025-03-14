@@ -1,10 +1,41 @@
 import type { StaticImageData } from "next/image";
 import placeholderImage from "@/assets/placeholder.webp";
 
+import pmc_hero from "@/assets/pureminecraft/hero.webp";
+
+type Technologies = 
+    | "NextJS" 
+    | "TypeScript" 
+    | "React" 
+    | "Node.js" 
+    | "Prisma" 
+    | "Drizzle" 
+    | "PostgreSQL" 
+    | "MongoDB" 
+    | "TailwindCSS" 
+    | "Docker" 
+    | "AWS" 
+    | "Vercel" 
+    | "GitHub Actions" 
+    | "Jest" 
+    | "Cypress" 
+    | "GraphQL" 
+    | "Redis" 
+    | "Express.js" 
+    | "NestJS" 
+    | "tRPC"
+	| "Stripe"
+	| "shadcn-ui"
+	| "OpenAI API"
+	| "Vercel AI SDK"
+	| "Crypto"
+	| "Zod"
+
 type Project = {
 	id: string,
 	name: string,
 	slug: string,
+	technologies: Technologies[],
 	description: string,
 	images: StaticImageData[],
 	siteUrl: string,
@@ -20,6 +51,7 @@ export const PROJECTS: Project[] = [
 		images: [placeholderImage],
 		siteUrl: "",
 		githubUrl: "",
+		technologies: ["NextJS", "TypeScript", "Prisma", "TailwindCSS", "PostgreSQL", "Stripe", "OpenAI API", "Zod"]
 	},
 	{
 		id: "id_proj_2",
@@ -29,6 +61,7 @@ export const PROJECTS: Project[] = [
 		images: [placeholderImage],
 		siteUrl: "",
 		githubUrl: "",
+		technologies: ["NextJS", "TypeScript", "Prisma", "TailwindCSS", "PostgreSQL", "Stripe", "Vercel AI SDK", "Zod"]
 	},
 	{
 		id: "id_proj_3",
@@ -38,15 +71,17 @@ export const PROJECTS: Project[] = [
 		images: [placeholderImage],
 		siteUrl: "",
 		githubUrl: "",
+		technologies: ["NextJS", "TypeScript", "Prisma", "TailwindCSS", "PostgreSQL", "Stripe", "Zod"]
 	},
 	{
 		id: "id_proj_4",
 		name: "PureMinecraft",
         slug: "pureminecraft",
 		description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur natus esse, sint voluptate beatae laborum quae magnam! Minima, vel hic! Est labore explicabo ipsam libero rerum! Amet, nulla tenetur!",
-		images: [placeholderImage],
+		images: [pmc_hero],
 		siteUrl: "",
 		githubUrl: "",
+		technologies: ["NextJS", "TypeScript", "Prisma", "TailwindCSS", "PostgreSQL", "Stripe", "Zod"]
 	},
 	{
 		id: "id_proj_5",
@@ -56,6 +91,7 @@ export const PROJECTS: Project[] = [
 		images: [placeholderImage],
 		siteUrl: "",
 		githubUrl: "",
+		technologies: ["NextJS", "TypeScript", "Prisma", "TailwindCSS", "PostgreSQL", "Stripe", "Zod", "Crypto"]
 	},
 ];
 
