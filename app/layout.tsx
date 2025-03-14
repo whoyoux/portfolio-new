@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import Header from "@/components/header";
+import StillInProgress from "@/components/still-in-progress";
 
 const interSans = Inter({
 	variable: "--font-inter-sans",
@@ -40,6 +41,7 @@ export default function RootLayout({
 				>
 					<div className="max-w-screen-md mx-auto md:px-0 px-4">
 						<Header />
+						{/* <StillInProgress /> */}
 						{children}
 					</div>
 				</ThemeProvider>
