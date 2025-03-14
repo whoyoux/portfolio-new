@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import Header from "@/components/header";
-import StillInProgress from "@/components/still-in-progress";
+// import StillInProgress from "@/components/still-in-progress";
 
 const interSans = Inter({
 	variable: "--font-inter-sans",
