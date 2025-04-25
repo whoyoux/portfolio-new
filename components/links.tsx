@@ -8,7 +8,7 @@ export default function Links() {
 			<ul>
 				{MY_LINKS.map((myLink) => (
 					<li key={myLink.id}>
-						<Link href={myLink.url}>
+						<Link href={myLink.url} prefetch={true}>
 							<h5>{myLink.name}</h5>
 						</Link>
 					</li>

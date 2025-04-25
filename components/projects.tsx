@@ -9,7 +9,7 @@ export default function Projects() {
 			<ul>
 				{PROJECTS.map((project) => (
 					<li key={project.id}>
-						<Link href={`/${project.slug}`}>
+						<Link href={`/${project.slug}`} prefetch={true}>
 							<ViewTransition name={`proj-${project.slug}`}>
 								<h5>{project.name}</h5>
 							</ViewTransition>
