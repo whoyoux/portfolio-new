@@ -155,7 +155,7 @@ export const MY_LINKS = [
 	{
 		id: "id_link_cv",
 		name: "CV",
-		url: "#",
+		url: "/cv.pdf",
 	},
 	{
 		id: "id_link_email",
