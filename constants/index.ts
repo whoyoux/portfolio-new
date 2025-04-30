@@ -6,6 +6,7 @@ import ai_hero from "@/assets/ai/hero.png";
 import plantcare_hero from "@/assets/plantcare/hero.png";
 import ecomm_hero from "@/assets/ecommerce/hero.png";
 import shareit_hero from "@/assets/shareit/hero.png";
+import snapcal_hero from "@/assets/snapcal/snapcal_hero.png";
 
 type Technologies =
 	| "NextJS"
@@ -142,6 +143,25 @@ export const PROJECTS: Project[] = [
 			"Stripe",
 			"Zod",
 			"Crypto",
+		],
+	},
+	{
+		id: "id_proj_6",
+		name: "SnapCal",
+		slug: "snapcal",
+		description: "an easy way to estimate calories of your meal",
+		images: [snapcal_hero],
+		siteUrl: "https://snapcal-whx.vercel.app",
+		githubUrl: "https://github.com/whoyoux/snapcal",
+		technologies: [
+			"NextJS",
+			"TypeScript",
+			"Prisma",
+			"TailwindCSS",
+			"PostgreSQL",
+			"Zod",
+			"shadcn-ui",
+			"Vercel AI SDK",
 		],
 	},
 ];
