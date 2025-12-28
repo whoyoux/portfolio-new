@@ -1,4 +1,4 @@
-import { unstable_ViewTransition as ViewTransition } from "react";
+import { ViewTransition } from "react";
 import { PROJECTS } from "@/constants";
 import Link from "next/link";
 

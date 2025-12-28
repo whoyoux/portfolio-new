@@ -6,7 +6,7 @@ import placeholderImage from "@/assets/placeholder.webp";
 
 import { Badge } from "@/components/ui/badge";
 
-import { unstable_ViewTransition as ViewTransition } from "react";
+import { ViewTransition } from "react";
 import Image from "next/image";
 import { getProjectBySlug } from "@/lib/utils";
 import Footer from "@/components/footer";
