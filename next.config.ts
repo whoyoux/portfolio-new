@@ -6,8 +6,7 @@ const nextConfig: NextConfig = {
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
   experimental: {
     viewTransition: true
-  },
-  output: 'export',
+  }
 };
 
 const withMDX = createMDX({
