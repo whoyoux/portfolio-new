@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
   experimental: {
     viewTransition: true
   },
+  output: 'export',
 };
 
 const withMDX = createMDX({
