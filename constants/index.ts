@@ -191,4 +191,10 @@ export const MY_PACKAGES = [
 		description: "A simple package for creating a dummy array.",
 		url: "https://www.npmjs.com/package/dummy-array",
 	},
+	{
+		id: "id_opensource_packages_@whoyoux/simple-logger",
+		name: "@whoyoux/simple-logger",
+		description: "A simple logger for logging messages to the console.",
+		url: "https://www.npmjs.com/package/@whoyoux/simple-logger",
+	}
 ];
