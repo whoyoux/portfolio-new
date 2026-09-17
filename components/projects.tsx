@@ -1,4 +1,3 @@
-import { ViewTransition } from "react";
 import { PROJECTS } from "@/constants";
 import Link from "next/link";
 
@@ -9,10 +8,8 @@ export default function Projects() {
 			<ul>
 				{PROJECTS.map((project) => (
 					<li key={project.id}>
-						<Link href={`/${project.slug}`} prefetch={true}>
-							<ViewTransition name={`proj-${project.slug}`}>
-								<h5>{project.name}</h5>
-							</ViewTransition>
+						<Link href={`/${project.slug}`}>
+							<h5>{project.name}</h5>
 						</Link>
 					</li>
 				))}

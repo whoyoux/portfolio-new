@@ -4,7 +4,6 @@ import { notFound } from "next/navigation";
 
 import { Badge } from "@/components/ui/badge";
 
-import { ViewTransition } from "react";
 import Image from "next/image";
 import { getProjectBySlug } from "@/lib/utils";
 import { getAssetImage } from "@/lib/images";
@@ -49,9 +48,7 @@ export default async function ProjectPage({
 			<GoBackButton />
 			<div className="prose dark:prose-invert w-full max-w-full flex flex-col gap-4 md:gap-8">
 				<div>
-					<ViewTransition name={`proj-${proj.slug}`}>
-						<h3 className="mt-2">{proj.name}</h3>
-					</ViewTransition>
+					<h3 className="mt-2">{proj.name}</h3>
 
 					<div className="w-full aspect-video bg-card rounded-lg border relative">
 						<Image
