@@ -3,7 +3,7 @@ import { MY_LINKS } from "@/constants";
 export default function Links() {
 	return (
 		<section>
-			<h4>🔗 My links</h4>
+			<h4>My links</h4>
 			<ul>
 				{MY_LINKS.map((myLink) => (
 					<li key={myLink.id}>

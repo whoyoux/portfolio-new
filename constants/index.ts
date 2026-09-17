@@ -34,9 +34,14 @@ type Project = {
 	id: string;
 	name: string;
 	slug: string;
+	/** One sentence; shown on the home page and used as the meta description. */
+	tagline: string;
 	technologies: Technologies[];
 	/** Path relative to `assets/`, see `getAssetImage`. */
 	hero: string;
+	repo: string;
+	/** Public URL, only when the project is still deployed. */
+	live?: string;
 };
 
 export const PROJECTS: Project[] = [
@@ -44,6 +49,8 @@ export const PROJECTS: Project[] = [
 		id: "id_proj_1",
 		name: "AI Generator",
 		slug: "ai-generator",
+		tagline: "Images and voice-overs from a text prompt, paid with credits.",
+		repo: "https://github.com/whoyoux/ai-image-generator",
 		hero: "ai-generator/hero.webp",
 		technologies: [
 			"NextJS",
@@ -58,8 +65,10 @@ export const PROJECTS: Project[] = [
 	},
 	{
 		id: "id_proj_2",
-		name: "Plantcare",
+		name: "PlantCare",
 		slug: "plantcare",
+		tagline: "Snap a photo of a plant, get its name and a care plan.",
+		repo: "https://github.com/whoyoux/plant-care",
 		hero: "plantcare/hero.webp",
 		technologies: [
 			"NextJS",
@@ -76,6 +85,8 @@ export const PROJECTS: Project[] = [
 		id: "id_proj_3",
 		name: "Ecommerce",
 		slug: "ecommerce",
+		tagline: "Online shop with cart, Stripe checkout, orders and an admin panel.",
+		repo: "https://github.com/whoyoux/ecommerce",
 		hero: "ecommerce/hero.webp",
 		technologies: [
 			"NextJS",
@@ -91,6 +102,8 @@ export const PROJECTS: Project[] = [
 		id: "id_proj_4",
 		name: "PureMinecraft",
 		slug: "pureminecraft",
+		tagline: "Paid whitelist for a Minecraft server, checked live by the server itself.",
+		repo: "https://github.com/whoyoux/mc-payment-gateway",
 		hero: "pureminecraft/hero.webp",
 		technologies: [
 			"NextJS",
@@ -106,6 +119,8 @@ export const PROJECTS: Project[] = [
 		id: "id_proj_5",
 		name: "ShareIt",
 		slug: "shareit",
+		tagline: "Private image storage with per-user encryption.",
+		repo: "https://github.com/whoyoux/shareit",
 		hero: "shareit/hero.webp",
 		technologies: [
 			"NextJS",
@@ -122,6 +137,8 @@ export const PROJECTS: Project[] = [
 		id: "id_proj_6",
 		name: "SnapCal",
 		slug: "snapcal",
+		tagline: "Calories and macros from a photo of your meal.",
+		repo: "https://github.com/whoyoux/snapcal",
 		hero: "snapcal/hero.webp",
 		technologies: [
 			"NextJS",
@@ -132,6 +149,7 @@ export const PROJECTS: Project[] = [
 			"Zod",
 			"shadcn-ui",
 			"Vercel AI SDK",
+			"OpenAI API",
 		],
 	},
 ];

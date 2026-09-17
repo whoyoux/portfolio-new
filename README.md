@@ -23,11 +23,18 @@ Node version is pinned in `.nvmrc`.
 
 ## Content
 
-- `constants/index.ts` – projects list (name, slug, hero image, tech stack), links, packages, birth date.
-- `content/<slug>.mdx` – project page body. Images use plain markdown with a path relative to `assets/`:
-  `![SnapCal dashboard](snapcal/dashboard.png)`. No imports needed.
-- `assets/<slug>/` – project screenshots (hero + inline images).
-- `mdx-components.tsx` – the single place that maps MDX elements (links, images) to React components.
+- `constants/index.ts` – projects list (name, slug, tagline, hero image, tech stack, repo and
+  optional live URL), links, packages, birth date. The tagline is shown on the home page, under
+  the project title and as the page's meta description.
+- `content/<slug>.mdx` – project page body: a short intro, `## Features`, optionally
+  `## Screenshots`. Links to the repo/live site come from `constants`, not from MDX.
+  Images use plain markdown with a path relative to `assets/`, one per line; the alt text
+  becomes the caption: `![Dashboard with recent meals](snapcal/dashboard.webp)`.
+- `assets/<slug>/` – project screenshots (hero + inline images). Heroes are shown at 16:9,
+  inline images keep their own aspect ratio. Crop to the app's content – a full-desktop capture
+  of a narrow app is unreadable at 768px.
+- `mdx-components.tsx` – the single place that maps MDX elements (headings, links, images) to
+  React components.
 
 Age on the home page is computed at build time from `BIRTH_DATE`.
 

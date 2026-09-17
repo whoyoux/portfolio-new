@@ -1,10 +1,10 @@
-[Source code](https://github.com/whoyoux/shareit)
+A private place to keep images. Every file is encrypted with a key that belongs to the user before it is stored, and decrypted again on download.
 
-## Project Description
-ShareIt is a modern file sharing platform that enables users to securely share files and collaborate in real-time. The platform focuses on user privacy, ease of use, and efficient file management.
+Each user gets a random 32-byte key, itself encrypted with a master key from the environment. Files are encrypted with AES-256-CBC on the server, stored through UploadThing and decrypted by the download route.
 
-## Key Features
-- Secure file upload and sharing
-- End-to-end encryption
-- Cross-platform compatibility
-- Automatic file organization
+## Features
+- Sign in with NextAuth
+- Upload of PNG, JPEG and GIF files up to 50 MB, validated with Zod
+- Per-user encryption at rest, with user keys wrapped by a master key
+- File list with size, type and upload date, and a 1 GB storage quota
+- Client state with React Query

@@ -1,12 +1,10 @@
-[Source code](https://github.com/whoyoux/ai-image-generator)
+Type a prompt, get an image or a voice-over. Every generation costs a credit, and credits are bought through Stripe.
 
+I built it to wire an AI API, file storage and payments into one Next.js app – and to learn self-hosting: it ran on my own VPS with Docker and Coolify.
 
-## Project Description
-AI Image Generator is a modern web application that enables image generation using artificial intelligence. The project utilizes cutting-edge technologies to create unique and creative visualizations based on text descriptions.
-
-## Key Features
-- Image generation based on text prompts
-- Access to generation history
-- Customizable generation parameters
-- Intuitive user interface
-- Fast processing and result generation
+## Features
+- Text → image with built-in styles or a custom one
+- Text → speech with a choice of voices
+- Credits bought through Stripe Checkout and spent per generation
+- Dashboard with every generated asset, stored on S3 through UploadThing
+- Auth with Lucia, server actions validated with Zod
