@@ -1,14 +1,13 @@
-[Source code](https://github.com/whoyoux/snapcal)
+Take a photo of your meal and get its calories. A small app I built to try structured output from a vision model.
 
-## Project Description
-SnapCal is a fast and easy way to estimate the calories in your meal. Just take a photo, and you'll instantly know how many calories you're about to eat.
+The photo is compressed with sharp, uploaded through UploadThing and sent to GPT-4o mini through the Vercel AI SDK with a Zod schema – so the answer comes back as typed JSON: meal name, calories, carbs, protein, fat and ingredients. It is saved to Postgres and shows up in your meal history.
 
-## Key Features
-- File upload
-- Estimate by AI
+## Features
+- Calories and macros (carbs, protein, fat) from a single photo
+- Meal history with a page per meal
+- Delete a meal
+- Installable as a PWA
+- Auth with better-auth, Prisma on Postgres
 
-**User dashboard**
-![SnapCal dashboard](snapcal/dashboard.webp)
-
-**Meal detailed page**
-![SnapCal meal detailed page](snapcal/meal.webp)
+## Screenshots
+![Dashboard with recent meals](snapcal/dashboard.webp)

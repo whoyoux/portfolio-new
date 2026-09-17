@@ -1,17 +1,15 @@
-[Source code](https://github.com/whoyoux/mc-payment-gateway)
+A paid whitelist for a private Minecraft server. Players sign in with Discord, buy a permanent spot, set their in-game name – and the server itself asks this app who is allowed in.
 
+The part I like most is the whitelist endpoint: the Minecraft server calls it with the player's username and a secret header, gets a yes/no back, and the game's whitelist is never edited by hand.
 
-## Project Description
-PureMinecraft is a comprehensive platform for managing Minecraft server access and subscriptions. The application provides a seamless experience for users to purchase server access, manage their subscriptions, and connect their Minecraft accounts.
+## Features
+- Sign in with Discord
+- One-time purchase of server access through Stripe Checkout and a webhook
+- In-game name verification, changeable once a day
+- Whitelist API for the server, protected by a secret header and cached for 60 s
+- Welcome and purchase emails through Resend (React email templates)
+- Dashboard with access status, billing and server info
+- Account deletion
 
-## Key Features
-- Secure payment processing for server access
-- User authentication and account management
-- Subscription management system
-- Automated email notifications
-- Minecraft nickname verification
-- User dashboard for account control
-- Account deletion functionality
-
-**User dashboard**
-![PureMinecraft user dashboard](pureminecraft/dashboard.webp)
+## Screenshots
+![Dashboard – in-game name and server access](pureminecraft/dashboard.webp)
