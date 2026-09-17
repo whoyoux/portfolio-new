@@ -3,7 +3,7 @@ export default function Education() {
 		<section>
 			<h4>Education</h4>
 			<p>
-				I&apos;m currently in my third year of Computer Science at UKEN in
+				I&apos;m currently in my last semester of Computer Science at UKEN in
 				Kraków, working towards my graduation.
 			</p>
 		</section>

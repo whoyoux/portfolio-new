@@ -14,14 +14,14 @@ export const metadata: Metadata = {
 	metadataBase: new URL(SITE_URL),
 	title: "Full-Stack Explorer | Next.js & AI Coding Enjoyer | whxx",
 	description:
-		"Junior Software Developer at Novomatic Technologies Poland. Self-taught full-stack developer, AI enthusiast and self-hosting enjoyer.",
+		"Frontend Junior Software Developer at Novomatic Technologies Poland. Self-taught full-stack developer, AI enthusiast and self-hosting enjoyer.",
 	keywords:
 		"Next.js, full-stack developer, AI coding, self-hosting, Vercel, movies, tech enthusiast",
 	authors: [{ name: "whxx", url: SITE_URL }],
 	openGraph: {
 		title: "Full-Stack Explorer | Next.js & AI Coding Enjoyer | whxx",
 		description:
-			"Junior Software Developer at Novomatic Technologies Poland. Self-taught full-stack developer, AI enthusiast and self-hosting enjoyer.",
+			"Frontend Junior Software Developer at Novomatic Technologies Poland. Self-taught full-stack developer, AI enthusiast and self-hosting enjoyer.",
 		url: SITE_URL,
 	},
 	robots: {
