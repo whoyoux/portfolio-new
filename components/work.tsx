@@ -3,7 +3,7 @@ export default function Work() {
 		<section>
 			<h4>Work</h4>
 			<p>
-				Frontend Junior Software Developer at{" "}
+				Junior Frontend Software Developer at{" "}
 				<strong>Novomatic Technologies Poland</strong>.
 			</p>
 		</section>
