@@ -1,5 +1,4 @@
 import { MY_LINKS } from "@/constants";
-import Link from "next/link";
 
 export default function Links() {
 	return (
@@ -8,9 +7,10 @@ export default function Links() {
 			<ul>
 				{MY_LINKS.map((myLink) => (
 					<li key={myLink.id}>
-						<Link href={myLink.url} prefetch={true}>
+						{/* plain anchors: these are files / mailto / external, not routes */}
+						<a href={myLink.url} target="_blank" rel="noopener noreferrer">
 							<h5>{myLink.name}</h5>
-						</Link>
+						</a>
 					</li>
 				))}
 			</ul>

@@ -1,5 +1,4 @@
 import { MY_PACKAGES } from "@/constants";
-import Link from "next/link";
 
 export default function OpenSource() {
 	return (
@@ -8,9 +7,9 @@ export default function OpenSource() {
 			<ul>
 				{MY_PACKAGES.map((pkg) => (
 					<li key={pkg.id}>
-						<Link href={pkg.url}>
+						<a href={pkg.url} target="_blank" rel="noopener noreferrer">
 							<h5>{pkg.name}</h5>
-						</Link>
+						</a>
 						<p className="mt-0">{pkg.description}</p>
 					</li>
 				))}

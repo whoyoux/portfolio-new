@@ -1,0 +1,3 @@
+# pnpm 10+ reads these here instead of the "pnpm" field in package.json.
+onlyBuiltDependencies:
+  - sharp

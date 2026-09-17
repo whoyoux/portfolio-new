@@ -2,13 +2,12 @@ import GoBackButton from "@/components/go-back-button";
 import { PROJECTS } from "@/constants";
 import { notFound } from "next/navigation";
 
-import placeholderImage from "@/assets/placeholder.webp";
-
 import { Badge } from "@/components/ui/badge";
 
 import { ViewTransition } from "react";
 import Image from "next/image";
 import { getProjectBySlug } from "@/lib/utils";
+import { getAssetImage } from "@/lib/images";
 import Footer from "@/components/footer";
 
 export async function generateStaticParams() {
@@ -27,7 +26,7 @@ export async function generateMetadata({
 	if (!proj) return;
 
 	return {
-		title: `${proj.name} | whoyoux`,
+		title: `${proj.name} | whxx`,
 	};
 }
 export default async function ProjectPage({
@@ -40,9 +39,10 @@ export default async function ProjectPage({
 
 	if (!proj) return notFound();
 
-	const { default: MDX } = await import(`@/content/${slug}.mdx`);
-
-	const heroImage = proj.images[0] || placeholderImage;
+	const [{ default: MDX }, heroImage] = await Promise.all([
+		import(`@/content/${slug}.mdx`),
+		getAssetImage(proj.hero),
+	]);
 
 	return (
 		<div>
@@ -61,7 +61,6 @@ export default async function ProjectPage({
 							alt={`${proj.name} homepage`}
 							fill
 							sizes="(max-width: 768px) calc(100vw - 2rem), 768px"
-							quality={100}
 						/>
 					</div>
 				</div>
