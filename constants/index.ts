@@ -1,12 +1,6 @@
-import type { StaticImageData } from "next/image";
-import placeholderImage from "@/assets/placeholder.webp";
+export const SITE_URL = "https://whxx.dev";
 
-import pmc_hero from "@/assets/pureminecraft/hero.webp";
-import ai_hero from "@/assets/ai/hero.png";
-import plantcare_hero from "@/assets/plantcare/hero.png";
-import ecomm_hero from "@/assets/ecommerce/hero.png";
-import shareit_hero from "@/assets/shareit/hero.png";
-import snapcal_hero from "@/assets/snapcal/snapcal_hero.png";
+export const BIRTH_DATE = new Date("2004-04-15");
 
 type Technologies =
 	| "NextJS"
@@ -41,10 +35,8 @@ type Project = {
 	name: string;
 	slug: string;
 	technologies: Technologies[];
-	description: string;
-	images: StaticImageData[];
-	siteUrl: string;
-	githubUrl: string;
+	/** Path relative to `assets/`, see `getAssetImage`. */
+	hero: string;
 };
 
 export const PROJECTS: Project[] = [
@@ -52,11 +44,7 @@ export const PROJECTS: Project[] = [
 		id: "id_proj_1",
 		name: "AI Generator",
 		slug: "ai-generator",
-		description:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur natus esse, sint voluptate beatae laborum quae magnam! Minima, vel hic! Est labore explicabo ipsam libero rerum! Amet, nulla tenetur!",
-		images: [ai_hero],
-		siteUrl: "https://ai.whoyoux.com",
-		githubUrl: "",
+		hero: "ai-generator/hero.webp",
 		technologies: [
 			"NextJS",
 			"TypeScript",
@@ -72,11 +60,7 @@ export const PROJECTS: Project[] = [
 		id: "id_proj_2",
 		name: "Plantcare",
 		slug: "plantcare",
-		description:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur natus esse, sint voluptate beatae laborum quae magnam! Minima, vel hic! Est labore explicabo ipsam libero rerum! Amet, nulla tenetur!",
-		images: [plantcare_hero],
-		siteUrl: "https://plant-care-whx.vercel.app",
-		githubUrl: "",
+		hero: "plantcare/hero.webp",
 		technologies: [
 			"NextJS",
 			"TypeScript",
@@ -92,11 +76,7 @@ export const PROJECTS: Project[] = [
 		id: "id_proj_3",
 		name: "Ecommerce",
 		slug: "ecommerce",
-		description:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur natus esse, sint voluptate beatae laborum quae magnam! Minima, vel hic! Est labore explicabo ipsam libero rerum! Amet, nulla tenetur!",
-		images: [ecomm_hero],
-		siteUrl: "https://ecommerce-whx.vercel.app",
-		githubUrl: "",
+		hero: "ecommerce/hero.webp",
 		technologies: [
 			"NextJS",
 			"TypeScript",
@@ -111,11 +91,7 @@ export const PROJECTS: Project[] = [
 		id: "id_proj_4",
 		name: "PureMinecraft",
 		slug: "pureminecraft",
-		description:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur natus esse, sint voluptate beatae laborum quae magnam! Minima, vel hic! Est labore explicabo ipsam libero rerum! Amet, nulla tenetur!",
-		images: [pmc_hero],
-		siteUrl: "https://www.pureminecraft.me",
-		githubUrl: "",
+		hero: "pureminecraft/hero.webp",
 		technologies: [
 			"NextJS",
 			"TypeScript",
@@ -130,10 +106,7 @@ export const PROJECTS: Project[] = [
 		id: "id_proj_5",
 		name: "ShareIt",
 		slug: "shareit",
-		description: "secure file hosting, encrypts and decrypts all user files",
-		images: [shareit_hero],
-		siteUrl: "https://shareit-whx.vercel.app",
-		githubUrl: "",
+		hero: "shareit/hero.webp",
 		technologies: [
 			"NextJS",
 			"TypeScript",
@@ -149,10 +122,7 @@ export const PROJECTS: Project[] = [
 		id: "id_proj_6",
 		name: "SnapCal",
 		slug: "snapcal",
-		description: "an easy way to estimate calories of your meal",
-		images: [snapcal_hero],
-		siteUrl: "https://snapcal-whx.vercel.app",
-		githubUrl: "https://github.com/whoyoux/snapcal",
+		hero: "snapcal/hero.webp",
 		technologies: [
 			"NextJS",
 			"TypeScript",

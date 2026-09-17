@@ -1,16 +1,17 @@
 import type { NextConfig } from "next";
-import createMDX from '@next/mdx'
+import createMDX from "@next/mdx";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
-  experimental: {
-    viewTransition: true
-  }
+	// Fully static site (`out/`), served from Dokploy behind Cloudflare CDN.
+	output: "export",
+	// `/snapcal/index.html` instead of `/snapcal.html` – works on any static server.
+	trailingSlash: true,
+	images: {
+		// The image optimizer needs a Node server; static export serves files as-is.
+		unoptimized: true,
+	},
 };
 
-const withMDX = createMDX({
-  // Add markdown plugins here, as desired
-})
+const withMDX = createMDX();
 
 export default withMDX(nextConfig);

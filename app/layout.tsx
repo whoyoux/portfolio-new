@@ -3,8 +3,7 @@ import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import Header from "@/components/header";
-import PlausibleProvider from "next-plausible";
-// import StillInProgress from "@/components/still-in-progress";
+import { SITE_URL } from "@/constants";
 
 const interSans = Inter({
 	variable: "--font-inter-sans",
@@ -12,17 +11,18 @@ const interSans = Inter({
 });
 
 export const metadata: Metadata = {
-	title: "Full-Stack Explorer | Next.js & AI Coding Enjoyer | whoyoux",
+	metadataBase: new URL(SITE_URL),
+	title: "Full-Stack Explorer | Next.js & AI Coding Enjoyer | whxx",
 	description:
 		"Self-taught full-stack developer , AI enthusiast, and self-hosting enjoyer.",
 	keywords:
 		"Next.js, full-stack developer, AI coding, self-hosting, Vercel, movies, tech enthusiast",
-	authors: [{ name: "whoyoux", url: "whoyoux.com" }],
+	authors: [{ name: "whxx", url: SITE_URL }],
 	openGraph: {
-		title: "Full-Stack Explorer | Next.js & AI Coding Enjoyer | whoyoux",
+		title: "Full-Stack Explorer | Next.js & AI Coding Enjoyer | whxx",
 		description:
 			"Self-taught full-stack developer , AI enthusiast, and self-hosting enjoyer.",
-		url: "https://whoyoux.com",
+		url: SITE_URL,
 	},
 	robots: {
 		index: true,
@@ -44,36 +44,18 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en" suppressHydrationWarning>
-			<head>
-				<script
-					defer
-					data-domain="whoyoux.com"
-					src="https://plausible.whoyoux.com/js/script.outbound-links.pageview-props.tagged-events.js"
-				/>
-			</head>
 			<body className={`${interSans.variable} antialiased`}>
-				<PlausibleProvider
-					domain="whoyoux.com"
-					customDomain="https://plausible.whoyoux.com"
-					manualPageviews={true}
-					trackOutboundLinks={true}
-					taggedEvents={true}
-					selfHosted={true}
-					trackLocalhost={true}
+				<ThemeProvider
+					attribute="class"
+					defaultTheme="system"
+					enableSystem
+					disableTransitionOnChange
 				>
-					<ThemeProvider
-						attribute="class"
-						defaultTheme="system"
-						enableSystem
-						disableTransitionOnChange
-					>
-						<div className="max-w-screen-md mx-auto md:px-0 px-4">
-							<Header />
-							{/* <StillInProgress /> */}
-							{children}
-						</div>
-					</ThemeProvider>
-				</PlausibleProvider>
+					<div className="max-w-screen-md mx-auto md:px-0 px-4">
+						<Header />
+						{children}
+					</div>
+				</ThemeProvider>
 			</body>
 		</html>
 	);
