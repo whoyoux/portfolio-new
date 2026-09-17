@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Projects() {
 	return (
 		<section>
-			<h4>🚀 Projects</h4>
+			<h4>Projects</h4>
 			<ul>
 				{PROJECTS.map((project) => (
 					<li key={project.id}>
