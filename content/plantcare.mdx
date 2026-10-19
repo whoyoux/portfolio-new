@@ -1,10 +1,12 @@
-Take or upload a photo of a plant and the app tells you what it is and how to look after it.
+An iOS app that identifies plants from a photo, explains how to look after them and reminds you to water them. The interface is in Polish and English.
 
-Each photo is uploaded, sent to an AI model and the answer is saved as a structured care plan – in one database transaction that also charges a credit. New accounts start with 5 free credits; more can be bought through Stripe.
+The app is built with Expo and React Native. It talks to a Hono API running on Cloudflare Workers: Better Auth with Sign in with Apple or Google, Neon Postgres through Hyperdrive with a Drizzle schema, and photos stored in R2. Plants are identified by a Gemini model through OpenRouter, with the prompt and the Zod schemas shared between the app and the API. The model and prompt were picked with a small evaluation tool kept in the repo.
+
+Everything lives in one pnpm and Turborepo monorepo, and the infrastructure is code too (Alchemy). A push to `main` deploys the API and the website to the dev stage; a version tag deploys to production after a manual approval.
 
 ## Features
-- Plant identification from a photo, taken with the camera or uploaded
-- Name, scientific name and a short description of the plant
-- Care plan split into watering, light, soil, temperature, humidity, fertilization and repotting
-- A list of every identified plant with its care plan
-- Credit packs through Stripe Checkout and a webhook
+- Plant identification from a photo: common and Latin name, family and how sure the match is
+- Care plan: watering, light, temperature and more
+- Your plants list with watering reminders
+- Sign in with Apple or Google
+- Per-user rate limits and a shared cap on model calls to keep costs in check

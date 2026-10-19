@@ -1,0 +1,13 @@
+Hold a key, ask out loud, let go – and the answer appears in a small chat window. Quick Ask lives in the system tray and works on Windows, macOS and Linux.
+
+Push-to-talk listens to raw key down and up events through `uiohook-napi`, because Electron's `globalShortcut` only reports key presses. The recording goes to OpenRouter for transcription, and the answer is streamed back and rendered with Streamdown. You bring your own OpenRouter key and pick the models from the tray menu; the key is encrypted with the OS keychain and the audio never touches the disk.
+
+The model can call tools on its own: web search, calculations in a JavaScript sandbox (QuickJS compiled to WebAssembly, on a worker thread, with no network or file access), Vega-Lite charts, exchange rates from the National Bank of Poland, weather, time zones and image generation.
+
+## Features
+- Push-to-talk on right Ctrl (right Option on macOS), follow-up questions in the same chat
+- Any answering and transcription model through OpenRouter
+- Tools the model uses by itself, each one can be turned off in the tray menu
+- Conversation history in SQLite with Drizzle
+- Automatic updates from GitHub Releases
+- Installers for Windows, macOS and Linux built in CI
