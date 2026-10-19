@@ -9,8 +9,8 @@ export default function AboutMe() {
 			<h4>About me</h4>
 			<p>
 				A {age}yr youtube educated frontend and backend enjoyer (nextjs) <br />
-				New technologies enthusiast (Claude Opus is my favourite coworker) <br />
-				Wannabe stock market investor (buy high, sell low) <br />
+				New technologies enthusiast (Opus does the work) <br />
+				Wannabe stock market investor (mostly watching red candles) <br />
 				Movies and TV series critic <br />
 				Self-hosted and Vercel enjoyer <br />
 				Polish beer expert and home winemaker (I&apos;m just a student) <br />
