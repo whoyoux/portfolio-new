@@ -1,0 +1,13 @@
+A minimalist desktop notes app for people who want their notes to stay on their own computer. No account, no cloud sync, no telemetry. Runs on Windows, macOS and Linux.
+
+It is an Electron app with a React and shadcn/ui interface and a Tiptap rich-text editor. Notes are stored in SQLite, with a full-text search index (FTS5) behind the command palette. Notes can be exported to a portable archive encrypted with AES-256-GCM (key derived with scrypt) and imported on another computer.
+
+## Features
+- Rich-text editor: headings, lists, checklists, quotes and code blocks with syntax highlighting
+- Command palette with local full-text search (<kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>K</kbd>)
+- Trash with 30-day recovery, pinned notes, tags and sorting
+- Local version history, up to 50 restore points per note
+- Images pasted or dropped into a note are copied into the app's own storage
+- Encrypted export and import of one note or the whole library
+- Light and dark themes, English and Polish interface
+- Nightly installers built in CI for every platform

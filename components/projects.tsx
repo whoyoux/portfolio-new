@@ -1,5 +1,7 @@
-import { PROJECTS } from "@/constants";
+import { MY_LINKS, PROJECTS } from "@/constants";
 import Link from "next/link";
+
+const GITHUB_URL = MY_LINKS.find((link) => link.id === "id_link_github")?.url;
 
 export default function Projects() {
 	return (
@@ -15,6 +17,13 @@ export default function Projects() {
 					</li>
 				))}
 			</ul>
+			<p>
+				More projects on{" "}
+				<a href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
+					my GitHub
+				</a>
+				.
+			</p>
 		</section>
 	);
 }

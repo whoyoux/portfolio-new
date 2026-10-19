@@ -27,8 +27,18 @@ type Technologies =
 	| "shadcn-ui"
 	| "OpenAI API"
 	| "Vercel AI SDK"
-	| "Crypto"
-	| "Zod";
+	| "Zod"
+	| "Swift"
+	| "SwiftUI"
+	| "Electron"
+	| "Vite"
+	| "SQLite"
+	| "Tiptap"
+	| "OpenRouter"
+	| "Expo"
+	| "React Native"
+	| "Hono"
+	| "Cloudflare Workers";
 
 type Project = {
 	id: string;
@@ -46,6 +56,71 @@ type Project = {
 
 export const PROJECTS: Project[] = [
 	{
+		id: "id_proj_plantcare",
+		name: "PlantCare",
+		slug: "plantcare",
+		tagline: "iOS app that identifies plants from a photo and reminds you to water them.",
+		repo: "https://github.com/whoyoux/plantcare",
+		live: "https://plantcare.whxx.dev",
+		hero: "plantcare/hero.webp",
+		technologies: [
+			"Expo",
+			"React Native",
+			"TypeScript",
+			"Hono",
+			"Cloudflare Workers",
+			"Drizzle",
+			"PostgreSQL",
+			"OpenRouter",
+			"Zod",
+		],
+	},
+	{
+		id: "id_proj_quick_ask",
+		name: "Quick Ask",
+		slug: "quick-ask",
+		tagline: "Hold a key, ask out loud, get an AI answer in a small desktop window.",
+		repo: "https://github.com/whoyoux/quick-ask",
+		hero: "quick-ask/hero.webp",
+		technologies: [
+			"Electron",
+			"React",
+			"TypeScript",
+			"Vite",
+			"TailwindCSS",
+			"Drizzle",
+			"SQLite",
+			"OpenRouter",
+		],
+	},
+	{
+		id: "id_proj_wh_notes",
+		name: "wh_notes",
+		slug: "wh-notes",
+		tagline: "Private desktop notes that never leave your computer.",
+		repo: "https://github.com/whoyoux/wh_notes",
+		hero: "wh-notes/hero.webp",
+		technologies: [
+			"Electron",
+			"React",
+			"TypeScript",
+			"Vite",
+			"TailwindCSS",
+			"shadcn-ui",
+			"SQLite",
+			"Tiptap",
+		],
+	},
+	{
+		id: "id_proj_awake",
+		name: "Awake",
+		slug: "awake",
+		tagline: "macOS menu bar app that keeps your Mac and its display awake.",
+		repo: "https://github.com/whoyoux/awake",
+		hero: "awake/hero.webp",
+		technologies: ["Swift", "SwiftUI"],
+	},
+	{
 		id: "id_proj_1",
 		name: "AI Generator",
 		slug: "ai-generator",
@@ -60,24 +135,6 @@ export const PROJECTS: Project[] = [
 			"PostgreSQL",
 			"Stripe",
 			"OpenAI API",
-			"Zod",
-		],
-	},
-	{
-		id: "id_proj_2",
-		name: "PlantCare",
-		slug: "plantcare",
-		tagline: "Snap a photo of a plant, get its name and a care plan.",
-		repo: "https://github.com/whoyoux/plant-care",
-		hero: "plantcare/hero.webp",
-		technologies: [
-			"NextJS",
-			"TypeScript",
-			"Prisma",
-			"TailwindCSS",
-			"PostgreSQL",
-			"Stripe",
-			"Vercel AI SDK",
 			"Zod",
 		],
 	},
@@ -113,24 +170,6 @@ export const PROJECTS: Project[] = [
 			"PostgreSQL",
 			"Stripe",
 			"Zod",
-		],
-	},
-	{
-		id: "id_proj_5",
-		name: "ShareIt",
-		slug: "shareit",
-		tagline: "Private image storage with per-user encryption.",
-		repo: "https://github.com/whoyoux/shareit",
-		hero: "shareit/hero.webp",
-		technologies: [
-			"NextJS",
-			"TypeScript",
-			"Prisma",
-			"TailwindCSS",
-			"PostgreSQL",
-			"Stripe",
-			"Zod",
-			"Crypto",
 		],
 	},
 	{

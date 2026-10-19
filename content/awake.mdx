@@ -1,0 +1,13 @@
+A tiny macOS menu bar app that keeps your Mac and its display awake. Written in Swift and SwiftUI, with no third-party dependencies.
+
+Click the cup in the menu bar and turn Awake on until you turn it off, or for 30 minutes up to 8 hours. While it is on, the panel shows how much time is left with a progress bar, and the cup turns orange and steams.
+
+Under the hood it holds an IOKit power assertion of type `PreventUserIdleDisplaySleep` – the same one `caffeinate -d` creates – without spawning a separate process. When the app is turned off or quits for any reason, the kernel releases the assertion.
+
+## Features
+- Keep awake until turned off, or for 30m, 1h, 2h, 4h or 8h
+- Time left with a progress bar, or how long it has been on
+- Opens at login, can be turned off in the panel
+- Light and dark mode
+- Signed with a Developer ID and notarized by Apple
+- No data collected, no network connections
